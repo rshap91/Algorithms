@@ -237,6 +237,7 @@ The four adjacent digits in the 1000-digit number that have the greatest product
 Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
 """
+from functools import reduce
 
 @timer
 def largest_adj_product(n_digits):
