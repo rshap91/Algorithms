@@ -3,7 +3,7 @@ import random
 
 # selection sort
 def selection_sort(alist):
-	''' for each element in alist, swap with lowest element in list
+	''' For each element in alist, swap with lowest element in list
 	Time Taken: O(n**2)
 	where O is some constant
 	where n is the length of alist
