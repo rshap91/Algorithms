@@ -11,7 +11,7 @@ def selection_sort(alist):
 	# for each item
 	for i in range(len(alist)-1):
 		#print 'Current Index/ Value:', i, ' : ', alist[i]
-		l_idx = i+1 
+		l_idx = i+1
 		#print 'min remaining value', alist[l_idx]
 		# find the lowest item in remainder of list
 		for j in range(i + 2, len(alist)):
@@ -30,10 +30,10 @@ def selection_sort(alist):
 
 # bubble Sort
 def bubble_sort(alist):
-	''' Seems pretty intuitive. 
+	''' Seems pretty intuitive.
 	Iterate through list and on each pass swap all consecutive elements
 	so that the smaller item is first.
-	Even if the smallest item in the list is the last item, 
+	Even if the smallest item in the list is the last item,
 	after n iterations it will have been moved to the front step by step
 	Time Taken: <= O(n**2)
 	Worst Case Scenario is O(n**2) depending on where smallest item is.
@@ -55,11 +55,11 @@ def bubble_sort(alist):
 # Improved bubble_sort
 def improved_bubble(alist):
 	''' Notice how in the buble sort, even when it's nearing the end
-	it still iterates through all the numbers in the list even though we 
+	it still iterates through all the numbers in the list even though we
 	already know they've been moved back as far as they can go.
 	This version cuts down on that by removing extra iterations at the end
-	based on how many you already have. 
-	Additionally, if nothing gets swapped throughout the whole iteration 
+	based on how many you already have.
+	Additionally, if nothing gets swapped throughout the whole iteration
 	it means the sort is done... i think
 	'''
 	iter_count = len(alist)
@@ -103,8 +103,13 @@ l_large3 = [n for n in l_large]
 
 
 
-# MERGE SORT 
+# MERGE SORT
 def mergeSort(alist):
+	"""
+	The defacto method for sorting. Sorts in O(NlogN) time.
+	Splits the list into smaller and smaller components, and then
+	re-combines them, sorting each component as it goes.
+	"""
 	print("Splitting ",alist)
 	if len(alist)>1:
 		mid = len(alist)//2
@@ -141,4 +146,3 @@ def mergeSort(alist):
 alist = [98,4,22,45,2,33,11,1,90,47,45]
 mergeSort(alist)
 print(alist)
-
